@@ -1,0 +1,50 @@
+
+remote yarn and javascript . lock files
+
+add to gitignore
+*.lock
+node_module
+
+
+//comment out of index.js
+
+// connect to mongo db
+// const mongoUri = config.mongo.host;
+// mongoose.connect(mongoUri, { server: { socketOptions: { keepAlive: 1 } } });
+// mongoose.connection.on('error', () => {
+//   throw new Error(`unable to connect to database: ${mongoUri}`);
+// });
+
+// // print mongoose logs in dev env
+// if (config.mongooseDebug) {
+//   mongoose.set('debug', (collectionName, method, query, doc) => {
+//     debug(`${collectionName}.${method}`, util.inspect(query, false, 20), doc);
+//   });
+// }
+
+
+
+// delete the following
+/server
+    /auth
+    /test
+    /user
+
+
+FOR SERVICES 
+    ADD FOLDER TO SERVER DIR
+        ADD CONTROLLER\ ROUTE\ MONDEL\ TEST JS files
+
+        CONTROLLER
+            App logic, meat of application code
+
+        Route 
+            path to call the CONTROLLER
+
+
+Then in index.route.js
+    require the route file created above
+
+    create a route
+        this route will be calling the CONTROLLER
+        
