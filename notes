@@ -48,3 +48,20 @@ Then in index.route.js
     create a route
         this route will be calling the CONTROLLER
         
+
+-- yarn commands
+
+    yarn add package --dev
+    yard remove package
+
+    yarn add nodemon --dev // adds to dev env only wont install for production
+
+create start.sh
+    #!/bin/sh
+if [ $NODE_ENV = "production" ];
+then node src/index.js; 
+else nodemon src/index.js --legacy-watch;
+fi
+
+    change package.json start script to 
+     "start": ". ./start.sh",
